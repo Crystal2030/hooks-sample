@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+/* 设计图100px -> 1rem */
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+}
+html{
+  text-size-adjust: 100%;
+  font-weight: 300;
+  font-family: sans-serif, Tahoma, Helvetica, "Microsoft Yahei", "微软雅黑", Arial, STHeiti;
+  user-select: none;
+  touch-callout: none;
+}
+
+body{
+  margin: 0 auto;
+  background: rgb(247, 247, 247);
+  color : #000;
+}
+#wrap{
+  margin: auto;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+a[href^="javascript"]{-webkit-touch-callout: none;}
+i,em,b,strong{
+  font-style: normal;
+  font-weight: normal;
+}
+input, textarea, select {
+  outline: none;
+}
+input, button, select, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  outline: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+  pointer-events: none;
+}

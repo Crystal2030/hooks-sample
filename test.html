@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+﻿<section id="margin">
+    <style>
+        #margin{
+            background: pink;
+            overflow:hidden;//创建BFC
+        }
+        #margin>p{
+            margin: 5px auto 25px;
+            background: red;
+        }
+        div>p{
+            background: #00aced;
+        }
+    </style>
+    <p>1</p>
+    <!--<p>2</p>-->
+    <div style="overflow:hidden;"><p>2</p></div>
+    <p>3</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+
+
+.help-project-process{position: relative;}
+.help-project-process .step{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;position: absolute;}
+.help-project-process .step img {width: 70px;height: 70px;}
+.help-project-process .step p {margin: 10px 0 3px;font-family: PingFangSC;font-size: 12px;color: #323234;}
+.help-project-process .step span {font-family: PingFangSC;font-size: 9px;color: #999;}
+.help-project-process .step1{left: 0;top: 72px;}
+.help-project-process .step2{left: 106px;top: 72px;}
+.help-project-process .step3{left: 212px;top: 72px;}
+.help-project-process .step4{left: 318px;top: 72px;}
+.help-project-process .step5{left: 0;top: 0;}
+.help-project-process .step6{left: 126px;top: 0;}
+.help-project-process .step7{left: 252px;top: 0;}
+.help-project-process .step8{lef: 0;top: 0;}
+.help-project-process .step9{left: 126px;top: 0;}
+.help-project-process .step1:after,
+.help-project-process .step2:after,
+.help-project-process .step3:after,
+.help-project-process .step5:after,
+.help-project-process .step6:after,
+.help-project-process .step8:after {content: '>';display: inline-block;width: 6px;height: 12px;color: #03bee4;position: absolute;left: 86px;top: 25px;}
+.help-project-process .step4:after{content: '';display: inline-block;position: absolute;left: 75px;top: -42px;width: 56px;height: 156px;background: url("./images/help/13@2x.png") no-repeat 0 0;background-size: 56px 156px;}
+.help-project-process .process-status {position: relative;top: 0;left: 470px;height: 100%;}
+.help-project-process .process-status .process-status-pass{position: absolute;top: 0;}
+.help-project-process .process-status .process-status-reject{position: absolute;top: 144px;}
+.help-project-process .process-status .step9:after{position: absolute;right: -21px;top: 30px;content: '';display: inline-block;width: 442px;height: 98px;background: url("./images/help/11@2x.png") no-repeat 0 0;background-size: 442px 98px;}
