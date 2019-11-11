@@ -3,25 +3,25 @@ import React, { useState, useEffect, useReducer, useMemo, useCallback, useRef, u
 import Main from './main';
 import './index.less'
 
-/*export default class Example extends React.Component {
+export default class HookSample extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             count: 0
         }
     }
-
     render() {
         return (
             <div>
                 点击了{this.state.count}次
 
                 <p></p>
-                <button onClick={() => this.setState({count: this.state.count + 1})}>点我点我</button>
+                <button className="button" onClick={() => this.setState({count: this.state.count + 1})}>点我点我</button>
             </div>
         )
     }
-}*/
+}
+
 
 /**
  * 2. 我们通过调用 useState Hook 声明了一个新的 state 变量。它返回一对值给到我们命名的变量上。
@@ -134,12 +134,12 @@ export default () => {
 
 
 /**
- * ﻿context（上下文）是react提供的一个用于实现数据共享的API，它可以解决需要通过多层嵌套传递props的问题
- * ﻿1. 通过React.createContext()创建context对象
+ * context（上下文）是react提供的一个用于实现数据共享的API，它可以解决需要通过多层嵌套传递props的问题
+ * 1. 通过React.createContext()创建context对象
  * 2. 使用Context.Provider包裹组件，给它的后代组件提供数据
  * 3. Context.Provider所有的后代组件，都可以通过Context.Consumer获取Context数据
  */
-// 1.﻿创建context
+// 1.创建context
 // const Context = React.createContext();
 // 2. 使用Context.Provider包裹组件,把数据传递给业务组件
 {/*<Context.Provider value = {store}>
@@ -174,6 +174,11 @@ export default (props) => {
 
 
 // useMemo: ﻿性能优化的API，它通过记忆值手段让你避免在每个渲染上执行高开销的计算，可减少渲染的耗时。﻿尤其适用在需要复杂计算的场景，比如复杂的列表渲染，对象深拷贝等等。
+/**
+ * useMemo的第二个参数：策略跟useEffect一致。不同点：useEffect执行的是副作用，所以是渲染之后运行；但是useMemo需要返回值，返回值可以直接参与渲染，所以是渲染期间完成
+ * ①不传：每次都运行
+ * ②空数组：运行一次
+ */
 /*export default (props) => {
     const obj1 = {id: '12', name: 'jack'};
     const obj2 = {id: '14', name: 'ben', age: 23};
@@ -188,6 +193,7 @@ export default (props) => {
 
 
 // useCallback ﻿useMemo的返回值就是callback的返回值，而useCallbak的返回值则callback函数本身
+// useMemo(() => fn)   ===  useCallback(fn);
 /*
 export default (props) => {
     const obj1 = {id: '12', name: 'jack'};
@@ -240,7 +246,7 @@ export default (props) => {
 
 
 // 自定义hook
-const useDocumentTitle = (title) => {
+/* const useDocumentTitle = (title) => {
     useEffect(() => {
         document.title = title;
     }, [title])
@@ -255,6 +261,6 @@ export default (props) => {
             自定义hook
         </div>
     )
-}
+} */
 
 

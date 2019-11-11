@@ -2,26 +2,34 @@
  * react hook sample1
  */
 import React, {PureComponent} from 'react';
-import HookSample from './HookSample';
+// import HookSample from './HookSample';
+// import HookSample from './HookSample/2.useState';
+// import HookSample from './HookSample/3.useEffect';
+// import HookSample from './HookSample/4.useContext';
+// import HookSample from './HookSample/5.useMemo&useCallback';
+// import HookSample from './HookSample/6.useRef';
+import HookSample from './HookSample/7.customHook';
 // import './lib/swiper.css';
-// import './index.css';
+import './index.css';
 
 export default class App extends PureComponent {
     render() {
         return (
-            <div class="wrapper">
-                <header class="header">我是头部</header>
-                <section class="content">
+            <div className="wrapper">
+                <header className="header">我是头部</header>
+                <section className="content">
                     <HookSample/>
                 </section>
-                <footer class="footer">我是底部</footer>
-                <div class="first-page">
+                <footer className="footer">我是底部</footer>
+                <div className="first-page">
 
                 </div>
             </div>
         );
     }
 }
+
+ReactDOM.render(<App/>, document.getElementById("wrap"));
 
 /**
  * react hook sample2
